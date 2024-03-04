@@ -1,7 +1,7 @@
-# prueba-obsidian
 ---
 title: Readme
 ---
+# prueba-obsidian
 
 Esto es una prueba
 
