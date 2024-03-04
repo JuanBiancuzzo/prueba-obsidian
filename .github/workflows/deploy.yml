@@ -24,6 +24,9 @@ jobs:
         with:
           path: ./content
 
+      - name: Verificando
+        run: tree .
+
       - name: Building with docker
         uses: addnab/docker-run-action@v3
         with:
