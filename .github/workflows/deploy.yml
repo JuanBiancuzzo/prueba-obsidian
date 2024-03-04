@@ -30,7 +30,7 @@ jobs:
           run: npx quartz build && mv public content
 
       - name: Verificando
-        run: tree .
+        run: tree -a .
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
