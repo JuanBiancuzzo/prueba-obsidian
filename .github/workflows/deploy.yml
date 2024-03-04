@@ -27,7 +27,7 @@ jobs:
         with:
           image: juanbiancuzzo/obsidian-static-site:0.1
           options: -v ${{ github.workspace }}:/usr/src/app/content
-          run: mv README.md index.md && npx quartz build && mv public content
+          run: mv content/README.md content/index.md && npx quartz build && mv public content
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
