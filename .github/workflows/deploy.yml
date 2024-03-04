@@ -28,7 +28,7 @@ jobs:
         uses: addnab/docker-run-action@v3
         with:
           image: juanbiancuzzo/obsidian-static-site:latest
-          options: -v ${{ github.workspace }}:/usr/src/app 
+          options: -v ${{ github.workspace }}:/app 
           run: mv content/README.md content/index.md && npx quartz build
 
       - name: Verificando
