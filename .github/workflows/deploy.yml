@@ -22,7 +22,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
         with:
-          path: ./content
+          path: ${{ github.workspace }}/content
 
       - name: Verificando
         run: tree .
