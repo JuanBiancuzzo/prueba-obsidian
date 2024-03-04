@@ -32,7 +32,7 @@ jobs:
         with:
           image: juanbiancuzzo/obsidian-static-site:latest
           options: -v ${{ github.workspace }}:/app 
-          run: mv content/README.md content/index.md && npx quartz build
+          run: npx quartz build
 
       - name: Verificando
         run: tree .
