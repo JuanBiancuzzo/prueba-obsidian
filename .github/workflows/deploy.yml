@@ -27,6 +27,7 @@ jobs:
         with:
           image: juanbiancuzzo/obsidian-static-site:latest
           options: -v ${{ github.workspace }}:/usr/src/app/content
+          run: sh -c ./start.sh
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
