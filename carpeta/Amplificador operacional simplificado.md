@@ -10,7 +10,11 @@ Podemos simplificar un [[Amplificador operacional]], con el siguiente [[Modelo]]
 ```tikz 
 \usepackage{circuitikz} 
 \begin{document} 
-\begin{circuitikz}[american, voltage shift=0.5] 	
+\begin{circuitikz}[
+    american, 
+    voltage shift=0.5
+
+] 	
 	\coordinate (O) at (0, 0);
     \coordinate (A) at (8, 0);
 

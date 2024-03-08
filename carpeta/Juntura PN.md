@@ -53,7 +53,8 @@ Su distribución de dopantes en una juntura PN es abrupta
 	\end{tikzpicture}
 \end{document}
 ```
-Donde podemos decir $$ 
+Donde podemos decir 
+$$ 
 N_a(x) = \begin{cases} 
 	N_a & x \le 0 \\
 	0 & x > 0
@@ -63,7 +64,8 @@ N_d(x) = \begin{cases}
 	0 & x \le 0 \\
 	N_d & x > 0
 \end{cases}
-$$ donde cambia el tipo de [[Dopaje|dopante]] ($x = 0$) se denomina [[Juntura metalúrgica]]
+$$
+donde cambia el tipo de [[Dopaje|dopante]] ($x = 0$) se denomina [[Juntura metalúrgica]]
 
 ##### Concentración de [[Portador de carga|portadores]]
 ---
