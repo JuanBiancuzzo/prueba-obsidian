@@ -32,7 +32,7 @@ Podemos simplificar un [[Amplificador operacional]], con el siguiente [[Modelo]]
     \draw (11.25, 3) to[open, v=$v_{out}$, o-o] ++ (0, -3);
 
     \draw [dashed, blue!50] (-1, -0.5) rectangle (3, 4);
-    \node[above = 2pt] (f) at (1, 4) {Fuente de señal};
+    \node[above = 2pt] (f) at (1, 4) {Fuente};
 
     \draw (4.5, -0.5) rectangle (10.5, 4);
     \draw [dashed, blue!50] (4.25, -0.75) rectangle (10.75, 4.25);
