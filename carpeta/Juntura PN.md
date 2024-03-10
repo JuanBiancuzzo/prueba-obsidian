@@ -53,8 +53,7 @@ Su distribución de dopantes en una juntura PN es abrupta
 	\end{tikzpicture}
 \end{document}
 ```
-Donde podemos decir 
-$$ 
+Donde podemos decir $$ 
 N_a(x) = \begin{cases} 
 	N_a & x \le 0 \\
 	0 & x > 0
@@ -70,13 +69,16 @@ donde cambia el tipo de [[Dopaje|dopante]] ($x = 0$) se denomina [[Juntura metal
 ##### Concentración de [[Portador de carga|portadores]]
 ---
 ![[Concentración de portadores en escala lineal de una juntura PN en equilibrio térmico.png|600]]
-$$ n_0(x) = \begin{cases} 
+$$ 
+n_0(x) = \begin{cases} 
 	\sim 0, &&            &&   x  &\le&  - x_{p_0}  \\
 	\sim 0, && -x_{p_0}   &<&  x  &\le&  ~~~~0      \\
 	\sim 0, && ~~~~0       &<&  x  &\le&  ~~~x_{n_0} \\
 	~N_d,   && ~~~x_{n_0} &<&  x  &
-\end{cases} $$
-$$ p_0(x) = \begin{cases} 
+\end{cases} 
+$$
+$$ 
+p_0(x) = \begin{cases} 
 	~N_a,   &&            &&   x  &\le&  - x_{p_0}  \\
 	\sim 0, && -x_{p_0}   &<&  x  &\le&  ~~~~0      \\
 	\sim 0, && ~~~~0       &<&  x  &\le&  ~~~x_{n_0} \\
