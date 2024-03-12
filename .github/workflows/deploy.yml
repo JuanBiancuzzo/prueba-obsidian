@@ -13,6 +13,9 @@ permissions:
 concurrency:
   group: "pages"
   cancel-in-progress: false
+
+env:
+  NEW_COMMIT_COUNT: 0
  
 jobs:
   chequeo:
@@ -23,7 +26,8 @@ jobs:
 
   build:
     needs: chequeo
-    if: ${{ env.NEW_COMMIT_COUNT > 0 }}
+
+    if: ${{ $NEW_COMMIT_COUNT > 0 }}
     runs-on: ubuntu-22.04
     steps:
       - name: Checkout
