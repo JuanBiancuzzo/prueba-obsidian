@@ -15,9 +15,7 @@ concurrency:
   cancel-in-progress: false
  
 jobs:
-  build:
-
-    # if: ${{ env.NEW_COMMIT_COUNT > 0 }}
+  count-commits:
     runs-on: ubuntu-22.04
     steps:
       - name: Checkout
@@ -26,8 +24,21 @@ jobs:
       - name: Get new commits
         run: echo "NEW_COMMIT_COUNT=$(git log --oneline --since '24 hours ago' | wc -l)" >> $GITHUB_ENV
 
-      - name: Mostrar commits
-        run: echo "$NEW_COMMIT_COUNT"
+    outputs: 
+      count: ${{ env.NEW_COMMIT_COUNT }}
+
+
+  build:
+    needs: count-commits
+
+    if: needs.count-commits.outputs.count > 0
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Get new commits
+        run: echo "NEW_COMMIT_COUNT=$(git log --oneline --since '24 hours ago' | wc -l)" >> $GITHUB_ENV
 
       - name: Building with docker
         uses: addnab/docker-run-action@v3
