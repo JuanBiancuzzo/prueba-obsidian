@@ -22,6 +22,8 @@ jobs:
         run: echo "NEW_COMMIT_COUNT=$(git log --oneline --since '24 hours ago' | wc -l)" >> $GITHUB_ENV
       - name: Cat github env
         run: cat $GITHUB_ENV
+      - name: Mostrar cantidad commits
+        run: echo "$NEW_COMMIT_COUNT"
 
   build:
     needs: chequeo
@@ -29,6 +31,9 @@ jobs:
     # if: ${{ env.NEW_COMMIT_COUNT > 0 }}
     runs-on: ubuntu-22.04
     steps:
+      - name: Cat github env
+        run: cat $GITHUB_ENV
+
       - name: Checkout
         uses: actions/checkout@v3
 
