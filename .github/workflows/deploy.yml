@@ -31,7 +31,7 @@ jobs:
   build:
     needs: count-commits
 
-    if: needs.count-commits.outputs.count > 0
+    if: needs.count-commits.outputs.count == 0
     runs-on: ubuntu-22.04
     steps:
       - name: Checkout
