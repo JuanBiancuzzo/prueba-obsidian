@@ -15,27 +15,19 @@ concurrency:
   cancel-in-progress: false
  
 jobs:
-  chequeo:
-    runs-on: ubuntu-22.04
-    steps:
-      - name: Get new commits
-        run: echo "NEW_COMMIT_COUNT=$(git log --oneline --since '24 hours ago' | wc -l)" >> $GITHUB_ENV
-      - name: Cat github env
-        run: cat $GITHUB_ENV
-      - name: Mostrar cantidad commits
-        run: echo "$NEW_COMMIT_COUNT"
-
   build:
-    needs: chequeo
 
     # if: ${{ env.NEW_COMMIT_COUNT > 0 }}
     runs-on: ubuntu-22.04
     steps:
-      - name: Cat github env
-        run: cat $GITHUB_ENV
-
       - name: Checkout
         uses: actions/checkout@v3
+
+      - name: Get new commits
+        run: echo "NEW_COMMIT_COUNT=$(git log --oneline --since '24 hours ago' | wc -l)" >> $GITHUB_ENV
+
+      - name: Mostrar commits
+        run: echo "$NEW_COMMIT_COUNT"
 
       - name: Building with docker
         uses: addnab/docker-run-action@v3
