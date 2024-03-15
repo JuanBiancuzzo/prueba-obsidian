@@ -58,37 +58,6 @@ $$ R{0 \choose 1} = ~~ ? $$
 
 Entonces veamos el caso ${1 \choose 0}$:
 
-```tikz
-\begin{document}
-	\begin{tikzpicture}[
-			scale = 4, 
-			transform shape,
-		]
-		\draw[step=0.5, gray, thin] (-0.2, -0.2) grid (1.2, 1.2);
-		\draw[step=0.1, gray, very thin] (-0.2, -0.2) grid (1.2, 1.2);
-
-		\path (0, 0) -- (0, 1) 
-			node[pos=0, below left, scale=0.3] {$0$}
-			node[pos=0.5, left, scale=0.3] {$0.5$}
-			node[pos=1, left, scale=0.3] {$1$};
-		
-		\path (0, 0) -- (1, 0) 
-			node[pos=1, below, scale=0.3] {$1$};
-
-		\draw[->, thick] (0, -0.2) -- (0, 1.2);
-		\draw[->, thick] (-0.2, 0) -- (1.2, 0);
-
-		\draw (1, 0) arc (0:90:1);
-		
-		\filldraw[color=blue!70, fill=blue!50] (0, 0) -- (0.3, 0) arc (0:50.42:0.3) -- (0, 0);
-		\draw (0, 0) node[above=2.5pt, right=1.5pt, scale = 0.5] {$\alpha$};
-		
-		\draw[->, thick] (0, 0) -- (0.637, 0.77);
-		\draw[dashed] (0.637, 0) -- (0.637, 0.77);
-		\draw[dashed] (0, 0.77) -- (0.637, 0.77);
-	\end{tikzpicture}
-\end{document}
-```
 
 
 Podemos ver el triangulo rectángulo, entonces la posición en $x$ esta dado por el $cos(50.42\degree)$ y la $y$ esta dado por $sin(50.42\degree)$, entonces:
