@@ -53,7 +53,6 @@ Partiendo de una situación como esta
 
 Nosotros queremos rotar nuestro plano $\mathbb{R}^2$ por un ángulo de $50.42\degree$, entonces si la [[Transformación lineal]] la llamamos $R$, entonces necesitamos determinar
 
-
 $$ R{1 \choose 0} = ~~ ? $$
 $$ R{0 \choose 1} = ~~ ? $$
 
@@ -90,6 +89,7 @@ Entonces veamos el caso ${1 \choose 0}$:
 	\end{tikzpicture}
 \end{document}
 ```
+
 
 Podemos ver el triangulo rectángulo, entonces la posición en $x$ esta dado por el $cos(50.42\degree)$ y la $y$ esta dado por $sin(50.42\degree)$, entonces:
 
