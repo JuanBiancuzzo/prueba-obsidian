@@ -91,7 +91,6 @@ Entonces veamos el caso ${1 \choose 0}$:
 \end{document}
 ```
 
-
 Podemos ver el triangulo rectángulo, entonces la posición en $x$ esta dado por el $cos(50.42\degree)$ y la $y$ esta dado por $sin(50.42\degree)$, entonces:
 
 $$ R{1 \choose 0} = {cos\left(50.42\degree\right) \choose sin\left(50.42\degree\right)} $$
