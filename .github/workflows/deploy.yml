@@ -1,6 +1,7 @@
 name: Deploy Quartz site to GitHub Pages
  
 on:
+  workflow_dispatch: # Permite activarlo manualmente
   push: 
     branches: [ "main" ]
   pull_request: 
