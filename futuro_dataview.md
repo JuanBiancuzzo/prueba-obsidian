@@ -8,6 +8,10 @@ dv.list(lista);
 ```
 
 ```dataviewjs
-const lista = "Esto es otro".split(" ");
-dv.list(lista);
+
+dv.header(3, "Paginas");
+dv.el("br", "");
+
+let lista = dv.pages();
+dv.list(lista.map(archivo => archivo.file.name));
 ```

@@ -2,9 +2,7 @@
 
 Esto es una prueba
 
-<div>
-  <p>[[futuro_dataview]]</p>
-</div>
+[[futuro_dataview]]
 
 [[presente_tikz]]
 
