@@ -10,7 +10,7 @@ dv.list(lista);
 ```dataviewjs
 
 dv.header(3, "Paginas");
-dv.el("br", "");
+dv.el("hr", "");
 
 let lista = dv.pages();
 dv.list(lista.map(archivo => archivo.file.name));

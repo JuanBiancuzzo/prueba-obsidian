@@ -23,7 +23,14 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Building with docker
+      - name: Preprocesamiento de archivos
+        uses: addnab/docker-run-action@v3
+        with:
+          image: juanbiancuzzo/obsidian-static-site:pre-latest
+          options: -v ${{ github.workspace }}:/usr/src/app/content
+          run: sh -c ./start.sh
+
+      - name: Buildear static site con Quartz
         uses: addnab/docker-run-action@v3
         with:
           image: juanbiancuzzo/obsidian-static-site:latest
