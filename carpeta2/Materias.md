@@ -16,12 +16,15 @@ let materiasXcuatri = dv.pages("#materia")
 	.groupBy(pagina => {
 		return pagina.cuatri
 	}).sort(cuatrimestre => {
-		let pagina = cuatrimestre.rows[0];
-		let [anio, cuatri] = pagina.cuatri.split("C");
+		let [anio, cuatri] = cuatrimestre.key.split("C");
 		anio = parseInt(anio);
 		cuatri = parseInt(cuatri) - 1;
 		return anio + 0.5 * cuatri;
 	}, 'desc');
+
+dv.list([["hola", "tanto", "tiempo"], ["soy", "una", "multi"], ["lista"]]);
+
+dv.list(materiasXcuatri.flatMap(cuatri => cuatri.rows.file.name));
 
 for (let cuatri of materiasXcuatri) {
 	dv.table([nombre_cuatrimestre(cuatri), "Código", "Estado", "Plan"], cuatri.rows.map(materia => {

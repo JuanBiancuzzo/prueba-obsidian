@@ -8,7 +8,6 @@ dv.list(lista);
 ```
 
 ```dataviewjs
-
 dv.header(3, "Paginas");
 dv.el("hr", "");
 
